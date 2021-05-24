@@ -1,0 +1,328 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 800px;
+    background-image: linear-gradient(rgb(216, 113, 29), rgb(37, 52, 56));
+}
+
+.container {
+    width: 900px;
+    height: 600px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 30px;
+    background-image: linear-gradient(rgb(29, 34, 39), rgb(192, 104, 3));
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    grid-template-areas:
+        "hp_satu hp_dua";
+}
+
+/* .phone {
+    background-color: antiquewhite;
+} */
+
+.phone {
+    display: grid;    
+    justify-items: center;
+    align-items: center;
+}
+
+.phone.satu {
+    grid-area: hp_satu;
+
+}
+
+.phone.dua {
+    grid-area: hp_dua;
+}
+
+
+.layer {
+    display: grid;
+    width: 250px;
+    height: 500px;
+    background-image: linear-gradient(rgb(10, 13, 17), rgb(11, 15, 15))  ;
+    border-radius: 20px;
+    border: 1px solid wheat;
+    transition: .3s;
+    box-sizing: border-box;
+    box-shadow: 0 5px 20px rgba(179, 167, 167, 0.6);
+    cursor: pointer;
+}
+
+
+/* HandPhone SATU */
+
+.layer.satu{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-rows: 25px 40px repeat(3, 3fr) 20px;
+    grid-template-areas: 
+        "ubun ubun ubun"
+        "logo brand brand"
+        "menu_1 menu_1 menu_1"
+        "menu_2a menu_2b menu_2c"
+        "menu_3a menu_3b menu_3c"
+        "bawah bawah bawah";
+    margin-right: -50px;
+    transition: .4s;
+}
+
+.layer.satu:hover  {
+    transform: scale(1.05);
+}
+
+.ubun   {
+    grid-area: ubun;
+}
+
+
+.ubun img {
+    height: 10px;
+    width: 20px;
+    margin-left: 10px;
+        
+}
+
+.ubun img:last-child {
+    margin-left:180px;
+}
+
+.logo {
+    display: grid;
+    grid-area: logo;
+    align-items: center;
+}
+.logo img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-top: 2px;
+    margin-left: 10px;
+}
+
+.logo, .brand {
+    margin-top: 15px;
+}
+
+.brand  {
+    display: grid;
+    margin-left: -25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    grid-area: brand;
+    align-items: center;
+    color: bisque;
+}
+
+.brand p {
+    margin-top: 12px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+
+
+
+/* menu satu */
+.menu_1 {
+    display: grid;
+    grid-area: menu_1;
+    place-self: center;
+}
+
+.menu_1 img {
+    width: 170px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 0 5px 30px rgba(216, 71, 4, .5);
+}
+
+
+/* menu dua dan tiga */
+.menu {
+    box-sizing: border-boxx;
+    display: grid;
+    justify-items: center;
+    color: bisque;
+}
+
+.menu  img {
+    margin-top: -5px;
+    height:  80px;
+    width: 70px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid rgb(94, 45, 6);
+    transition: .3s;
+    /* box-shadow: 0 5px 30px rgba(216, 71, 4, .5); */
+}
+
+.menu  img:hover {
+    transform: scale(1.05);
+}
+
+.menu h5 {
+    font-size: 13px;
+    text-shadow: 0 5px 30px rgba(216, 71, 4, 1);
+}
+
+.menu a {
+    margin-bottom: 5px;
+    font-size: 11px;
+    text-decoration: none;
+    color: blanchedalmond;
+}
+
+/* .menu.turun {
+    margin-top: 20px;
+} */
+
+.menu_2a {
+    grid-area: menu_2a;
+
+}
+.menu_2b {
+    grid-area: menu_2b;
+}
+.menu_2c {
+    grid-area: menu_2c;
+}
+
+.menu_3a {
+    grid-area: menu_3a;
+
+}
+.menu_3b {
+    grid-area: menu_3b;
+
+}
+.menu_3c{
+    grid-area: menu_3c;
+
+}
+
+
+/* bottom  */
+.bottom {
+    grid-area: bawah;
+    display: grid;
+    justify-content: center;
+}
+
+.bottom div {
+    height: 1px;
+    width: 95px;
+    border: 1px solid rgba(189, 181, 181, .7);
+    box-shadow: 0 1px 4px rgba(158, 157, 157, .8);
+    border-radius: 50%;
+    margin-top: 2px;
+}
+
+
+
+
+/* HANDPHONE DUA */
+
+.layer.dua{
+    background-image: url(img/bg2.jpg);
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-rows: 25px 40px repeat(3, 3fr) 20px;
+    grid-template-areas: 
+        "ubun ubun ubun"
+        "nama nama nama"
+        "menusatu menusatu ketmenusatu"
+        "ketmenudua menudua menudua"
+        "menutiga menutiga ketmenutiga"
+        "bawah bawah bawah";
+    /* transform: rotate(15deg) scale(.88); */
+    transform: rotate(30deg) scale(.9);
+    margin-left: -120px;
+    transition: .4s;
+}
+
+.layer.dua:hover{
+    transform: scale(1.1);
+}
+
+.nama   {
+    grid-area: nama;
+}
+
+.nama h3 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: bisque;
+}
+
+.menusatu {
+    grid-area: menusatu;
+}
+
+.ketmenu.satu {
+    grid-area: ketmenusatu;
+}
+
+.menudua {
+    grid-area: menudua;
+}
+
+.ketmenu.dua {
+    grid-area: ketmenudua;
+}
+
+.menutiga {
+    grid-area: menutiga;
+}
+
+.ketmenu.tiga {
+    grid-area: ketmenutiga;
+}
+
+.satu, .dua, .tiga {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+
+
+.ketmenu h5 {
+    color: aliceblue;
+    font-weight: 700;
+    font-size: 35px;
+    text-shadow: 0 5px 30px rgba(216, 71, 4, 1);
+}
+
+
+.ketmenu a {
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.snack {
+    display: grid;
+    place-self: center;
+}
+.snack img {
+    width: 110px;
+    height: 100px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(221, 220, 219, 0.6);
+    transform: rotate(25deg);
+    transition: .3s;
+}
+
+
+.snack img:hover {
+    transform: scale(1.10);
+}
+
+
+
+
+
+
+
